@@ -1,97 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cheligeer (Ken) Cheligeer - Personal Page</title>
     <style>
+        :root {
+            --ink: #2c3e50;
+            --acc: #3498db;
+        }
+        * { box-sizing: border-box; }
         body {
-            font-family: Arial, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
             line-height: 1.6;
             color: #333;
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 24px;
         }
         header {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
         }
-        h1 {
-            color: #2c3e50;
-        }
+        h1 { color: var(--ink); margin: 8px 0 0; }
         .profile-image {
             width: 200px;
             height: 200px;
             border-radius: 50%;
             object-fit: cover;
-            margin: 0 auto 20px;
+            margin: 0 auto 12px;
             display: block;
         }
-        section {
-            margin-bottom: 30px;
-        }
+        section { margin-bottom: 28px; }
         h2 {
-            color: #3498db;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 5px;
+            color: var(--acc);
+            border-bottom: 2px solid var(--acc);
+            padding-bottom: 6px;
+            margin-bottom: 12px;
         }
-        ul {
-            padding-left: 20px;
+        ul { padding-left: 20px; }
+        .tagline { margin: 6px 0 10px; color: #555; }
+        .meta {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 8px;
         }
+        .meta a {
+            color: var(--acc);
+            text-decoration: none;
+        }
+        .pill {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 999px;
+            border: 1px solid #e3e8ef;
+            background: #f9fafb;
+            margin: 2px 6px 2px 0;
+            font-size: 0.95rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 8px 16px;
+        }
+        .fineprint { color: #6b7280; font-size: 0.9rem; }
     </style>
 </head>
 <body>
     <header>
-        <img src="pic.jpg" alt="Cheligeer (Ken) Cheligeer" class="profile-image">
+        <img src="pic.jpg" alt="Cheligeer (Ken) Cheligeer" class="profile-image" />
         <h1>Cheligeer (Ken) Cheligeer</h1>
-        <p>Senior Analyst | Data Scientist | Machine Learning Expert</p>
-        <p style="text-align: center;">
-            <a href="https://clger007.github.io/resume/" style="text-decoration: none; color: #3498db;">Resume</a>
-        </p>
+        <p class="tagline">Lead, Machine Learning Precision Analytics — Cancer Care Alberta (AHS) · Adjunct Assistant Professor — Community Health Sciences, Cumming School of Medicine</p>
+        <div class="meta">
+            <a href="https://clger007.github.io/resume/">Online Resume</a>
+            <span>•</span>
+            <a href="cheligeer_cv_int.pdf" download>Download CV (PDF)</a>
+        </div>
     </header>
 
     <section>
         <h2>About Me</h2>
-        <p>I am a seasoned machine learning developer and data scientist with a Ph.D. in Systems Engineering, specializing in machine learning and natural language processing. My expertise lies in applying advanced AI techniques to healthcare and cancer research, with a focus on improving patient care and treatment outcomes.</p>
+        <p>
+            I am a machine learning and natural language processing researcher focused on clinical and population health applications. My recent work deploys LLM- and BERT-based pipelines on real-world narrative EMRs to detect hospital-acquired conditions, extract cancer outcomes from pathology, and quantify symptom burden for service planning. I build end-to-end systems—from data governance and labeling workflows to model development, evaluation, and integration—aimed at improving patient care and operational decision-making.
+        </p>
+    </section>
+
+    <section>
+        <h2>Current Roles</h2>
+        <ul>
+            <li><strong>Lead, Machine Learning Precision Analytics</strong>, Cancer Care Alberta, Alberta Health Services (AHS) — Calgary, Canada</li>
+            <li><strong>Adjunct Assistant Professor</strong>, Community Health Sciences, Cumming School of Medicine</li>
+        </ul>
     </section>
 
     <section>
         <h2>Education</h2>
         <ul>
-            <li>Ph.D. in Information and System Engineering, Concordia University, Canada (2018-2022)</li>
-            <li>Master of Information Technology, Monash University, Australia (2014-2015)</li>
-            <li>Master of Business Information System, Monash University, Australia (2014-2015)</li>
-            <li>Bachelor of Computer Science, Lanzhou University, China (2008-2012)</li>
+            <li>Ph.D., Information & Systems Engineering — Concordia University, Montreal, Canada (2018–2022)</li>
+            <li>Master of Information Technology — Monash University, Australia (2013–2015)</li>
+            <li>Master of Business Information Systems — Monash University, Australia (2013–2015)</li>
+            <li>B.Eng., Computer Science — Lanzhou University, China (2008–2012)</li>
         </ul>
     </section>
 
     <section>
         <h2>Work Experience</h2>
         <ul>
-            <li>Senior Analyst, Alberta Health Services, Calgary, Canada (2022-Present)</li>
-            <li>Data Scientist, Center for Health Informatics, University of Calgary, Canada (2021-Present)</li>
-            <li>Faculty Member, Hohhot Minzu University, Inner Mongolia, China (2016-2018)</li>
+            <li><strong>Lead, Machine Learning Precision Analytics</strong> — Cancer Care Alberta, AHS (Present)</li>
+            <li><strong>Senior Data Scientist</strong> — Provincial Research Data Services, Data & Analytics, AHS (2022.09–2023.11)</li>
+            <li><strong>Senior Data Scientist</strong> — Center for Health Informatics, Cumming School of Medicine (2021.09–2022.09)</li>
+            <li><strong>Lecturer</strong> — Hohhot University for Nationalities (2016.09–2018.08)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Featured Projects</h2>
+        <ul>
+            <li><strong>Cancer Complexity Scoring for Workload Planning</strong> (2025) — NLP pipeline on 2M+ EMR notes to extract symptom burden (anxiety, depression, pain) with expert-in-the-loop review.</li>
+            <li><strong>Dynamic Detection of Hospital Adverse Events</strong> (2024) — LLM-based system to identify AEs from unstructured notes; fine-tuned classifiers exceeded ICD-code baselines.</li>
+            <li><strong>Inpatient Fall Detection from Narrative EMRs using domain-specific BERT</strong> (2023) — Alberta EMR–pretrained BERT; improved safety surveillance vs. ICD baselines.</li>
+            <li><strong>Automated Pathology Report Interpretation for Breast Cancer</strong> (2023) — Extracted pathologic complete response (pCR) at population scale using rule-based and LLM approaches.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Selected Publications (2024–2025)</h2>
+        <ul>
+            <li>Cheligeer, C. <em>et al.</em> (2025). Utilizing large language models for detecting hospital-acquired conditions: pulmonary embolism. <em>JAMIA</em>, 32(5):876–884.</li>
+            <li>Pan, J., Lee, S., <strong>Cheligeer, C.</strong>, <em>et al.</em> (2025). Integrating LLMs with human expertise for disease detection in EHRs. <em>Computers in Biology and Medicine</em>, 191:110161.</li>
+            <li><strong>Cheligeer, C.</strong>, <em>et al.</em> (2024). BERT-based neural network for inpatient fall detection from EMRs. <em>JMIR Medical Informatics</em>, 12:e48995.</li>
+            <li><strong>Cheligeer, C.</strong>, <em>et al.</em> (2024). Validation of large language models for detecting pCR in breast cancer using pathology reports. <em>BMC Med. Inform. & Decision Making</em>, 24(1):283.</li>
+        </ul>
+        <p class="fineprint">Full list available upon request.</p>
+    </section>
+
+    <section>
+        <h2>Teaching & Mentorship</h2>
+        <ul>
+            <li>AI4PH Summer Institute Data Challenge — teaching assistant; designed CV pipeline and tutorials (2024)</li>
+            <li>Guest Lecturer, INSE 6270 (Concordia) — requirements analysis & UML (2019)</li>
+            <li>Mentored high school & undergraduate researchers on ML/NLP in oncology (2022–2023)</li>
         </ul>
     </section>
 
     <section>
         <h2>Skills</h2>
-        <ul>
-            <li>Machine Learning & Deep Learning</li>
-            <li>Natural Language Processing (NLP)</li>
-            <li>Python Programming</li>
-            <li>Data Analysis and Visualization</li>
-            <li>Healthcare Data Mining</li>
-            <li>Software Development</li>
-        </ul>
+        <div class="grid">
+            <span class="pill">Machine Learning & Deep Learning</span>
+            <span class="pill">Clinical NLP & LLMs</span>
+            <span class="pill">Python</span>
+            <span class="pill">Model Evaluation & Benchmarking</span>
+            <span class="pill">Healthcare Data Mining</span>
+            <span class="pill">Data Governance & Pipelines</span>
+            <span class="pill">MLOps & Deployment</span>
+            <span class="pill">Visualization & Reporting</span>
+        </div>
     </section>
 
     <section>
         <h2>Contact</h2>
-        <p>Email 1: cheligeerken@ucalgary.ca  </p> 
-        <p>Email 2: cheligeer.cheligeer@ahs.ca</p>
-
+        <p>Email 1: <a href="mailto:cheligeerken@ucalgary.ca">cheligeerken@ucalgary.ca</a></p>
+        <p>Email 2: <a href="mailto:cheligeer.cheligeer@ahs.ca">cheligeer.cheligeer@ahs.ca</a></p>
     </section>
+
+    <p class="fineprint">Last updated: August 20, 2025</p>
 </body>
 </html>
